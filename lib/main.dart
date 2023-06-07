@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:nice_buttons/nice_buttons.dart';
+import 'package:uas/menu.dart';
 
 void main() => runApp(MaterialApp(
   home: Main(),
@@ -49,7 +50,9 @@ class Main extends StatelessWidget {
                 onTap: (finish) {
                   print('berhasil');
                   Timer(Duration(seconds: 5), () {
-                    Navigator.pushNamed(context, '/tests');
+                    Navigator.push(context, new MaterialPageRoute(
+                        builder: (context) => new  MenuMusic())
+                    );
                     finish();
                   });
                 },
