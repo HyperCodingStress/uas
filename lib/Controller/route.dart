@@ -8,7 +8,7 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => Main());
-      case '/test':
+      case '//':
         return MaterialPageRoute(builder: (_) => MenuMusic());
       default:
         return _errorRoute();

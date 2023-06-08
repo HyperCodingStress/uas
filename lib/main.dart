@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:nice_buttons/nice_buttons.dart';
+import 'package:uas/Controller/route.dart';
 import 'package:uas/menu.dart';
 
 void main() => runApp(MaterialApp(
+    onGenerateRoute: RouteGenerator.generateRoute,
   home: Main(),
 ));
 
@@ -49,10 +51,8 @@ class Main extends StatelessWidget {
                 borderRadius: 20,
                 onTap: (finish) {
                   print('berhasil');
-                  Timer(Duration(seconds: 5), () {
-                    Navigator.push(context, new MaterialPageRoute(
-                        builder: (context) => new  MenuMusic())
-                    );
+                  Timer(Duration(seconds: 3), () {
+                    Navigator.pushNamed(context, '//');
                     finish();
                   });
                 },
